@@ -4,6 +4,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:go_router/go_router.dart';
 import 'package:http/http.dart' as http;
+import 'face_login_tab.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -239,6 +240,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                     ],
+
+                    // Face tab content
+                    if (_activeTab == 1) const FaceLoginTab(),
                   ],
                 ),
               ),
